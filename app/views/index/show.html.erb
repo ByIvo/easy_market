@@ -1,0 +1,11 @@
+<div class="container">
+	<div class="row">	
+			<% @markets.each do |market|%>
+				<div class="col-lg-4 col-md-6 col-xs-12">
+					<div class="market">
+						<%= button_tag market.name, {name: :btn_market, value: market.id} %>
+					</div>
+				</div>
+			<% end %>		
+	</div>
+</div>
