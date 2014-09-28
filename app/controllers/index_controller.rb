@@ -1,12 +1,12 @@
 class IndexController < ApplicationController
 
 	def show
-		@markets = Market.all
+		@booklets = Booklet.all
 	end
 
 	def show_products
-		if(params[:btn_market])
-			market = Market.find[paramns[:btn_market]]
+		if(params[:btn_booklet])
+			@booklet = Booklet.find(params[:btn_booklet])
 		end
 	end
 end

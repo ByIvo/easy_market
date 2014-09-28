@@ -1,11 +1,13 @@
 <div class="container">
-	<div class="row">	
-			<% @markets.each do |market|%>
-				<div class="col-lg-4 col-md-6 col-xs-12">
-					<div class="market">
-						<%= button_tag market.name, {name: :btn_market, value: market.id} %>
+	<%= form_tag 'show_products', method: :post do %>
+		<div class="row">	
+				<% @booklets.each do |booklet|%>
+					<div class="col-lg-4 col-md-6 col-xs-12">
+						<div class="booklet">
+							<%= button_tag booklet.name, {name: :btn_booklet, value: booklet.id} %>
+						</div>
 					</div>
-				</div>
-			<% end %>		
-	</div>
+				<% end %>		
+		</div>
+	<% end %>
 </div>
